@@ -6,7 +6,7 @@
 /*   By: alsanche <alsanche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:40:02 by alsanche          #+#    #+#             */
-/*   Updated: 2021/10/12 22:24:28 by alsanche         ###   ########lyon.fr   */
+/*   Updated: 2021/10/14 17:59:54 by alsanche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ static int	ft_hex_void(uintptr_t n, char *base)
 	strnbr = malloc(sizeof(char) * len + 1);
 	if (!strnbr)
 		return (0);
+	strnbr[len] = '\0';
 	while (len--)
 	{
 		point = n % 16;

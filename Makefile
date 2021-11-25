@@ -1,8 +1,8 @@
 NAME  = libftprintf.a
 
-SRC	= ft_unsig_itoa.c ft_hex.c ft_printf.c \
+SRC	=  ft_hex.c ft_printf.c \
 	ft_change.c ft_putchar.c ft_strlen.c \
-	ft_putstr.c ft_itoa.c
+	ft_putstr.c ft_putunbr.c ft_putnbr.c
 
 OBJS = $(SRC:.c=.o)
 

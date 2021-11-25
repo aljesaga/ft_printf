@@ -6,7 +6,7 @@
 /*   By: alsanche <alsanche@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 15:07:42 by alsanche          #+#    #+#             */
-/*   Updated: 2021/10/12 22:20:33 by alsanche         ###   ########lyon.fr   */
+/*   Updated: 2021/10/20 17:18:00 by alsanche         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static int	verifik2(const char *flag, int x, va_list args)
 
 	count = 0;
 	if (flag[x + 1] == 'i')
-		count = ft_putstr(ft_itoa(va_arg(args, int)));
+		count = ft_putnbr(va_arg(args, int), 0);
 	else if (flag[x + 1] == 'u')
-		count = ft_putstr(ft_unsig_itoa(va_arg(args, unsigned int)));
+		count = ft_putunbr(va_arg(args, unsigned int), 0);
 	else if (flag[x + 1] == 'x')
 		count = ft_hex(va_arg(args, unsigned int), "0123456789abcdef");
 	else if (flag[x + 1] == 'X')
@@ -46,7 +46,7 @@ static int	verify(const char *flag, int x, va_list args)
 		count += 2;
 	}
 	else if (flag[x + 1] == 'd')
-		count = ft_putstr(ft_itoa(va_arg(args, int)));
+		count = ft_putnbr(va_arg(args, int), 0);
 	return (count);
 }
 
